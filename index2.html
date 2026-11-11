@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GearX — savāc zobratus</title>
+<style>
+/* Pamata izkārtojums — šīs rindas nemaini */
+body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
+button, input { font: inherit; padding: 10px 16px; margin: 6px 0; cursor: pointer; }
+img, audio { max-width: 100%; }
+[hidden] { display: none !important; }
+
+/* Tumša kosmosa palete ar gaišu tekstu */
+body {
+  background-color: #0f2338;
+  color: #e8f1fa;
+}
+
+h1 {
+  color: #7fc0ff;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 16px 0;
+}
+
+h2 {
+  color: #a9d4ff;
+  font-size: 1.15rem;
+  margin: 0 0 12px 0;
+}
+
+.noteikumi {
+  background-color: #16324d;
+  color: #dbe9f7;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.noteikumi p {
+  margin: 0 0 10px 0;
+}
+
+.noteikumi p:last-child {
+  margin-bottom: 0;
+}
+
+.laukums {
+  width: 360px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  border: 3px dashed #2d7bc9;
+  border-radius: 12px;
+  background-color: #1a3a58;
+  color: #eef6ff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.laukums img {
+  display: block;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+}
+
+.laukums audio {
+  display: block;
+  width: 100%;
+  margin: 8px 0 12px 0;
+}
+
+button {
+  background-color: #2d7bc9;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #3d8fdd;
+}
+</style>
+</head>
+<body>
+<h1>GearX — savāc zobratus</h1>
+<p>Palīdzi Zobratu savācējam savākt visus zobratus, lai tas atgūst atkal savu spēku. Katrs klikšķis uz pogas ir viens savākts zobrats.</p>
+<section class="noteikumi">
+  <h2>Noteikumi</h2>
+  <p>Nospied pogu <strong>Savākt zobratu</strong>, lai Zobratu valdniekam pievienotu vienu zobratu. Skaitītājs zem pogas rāda, cik zobratu jau ir savākts — pēc trim klikšķiem tur būs <em>Punkti: 3</em>.</p>
+  <p>Skaņas joslu atskaņo ar pogu ▶ un apstādini ar to pašu pogu. Skaņa skan, kad Zobratu valdnieks ir savācis zobratus, un apstiprina, ka darbs ir izdevies.</p>
+  <p>Nākotnē: kad visi zobrati būs savākti, lapa pati paziņos par uzvaru un piedāvās nākamo līmeni. Šobrīd uzvara vēl jāskaita pašam.</p>
+</section>
+<div class="laukums">
+  <h2>Spēles laukums</h2>
+  <img src="atteli/varonis.png" alt="Zobratu valdnieks" width="128">
+  <p>Skaņa skan, kad Zobratu valdnieks
+    
+     savāc zobratu:</p>
+  <audio controls src="skanas/uzvara.m4a"></audio>
+  <p id="punkti">Punkti: 0</p>
+  <button onclick="savakt()">Savākt zobratu</button>
+</div>
+<script>
+// Gatava punktu poga — šo skriptu nemaini.
+let punkti = 0;
+function savakt() {
+  punkti = punkti + 1;
+  document.getElementById("punkti").textContent = "Punkti: " + punkti;
+}
+</script>
+</body>
+</html>

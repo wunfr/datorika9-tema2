@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GearX — spēles skaņas</title>
+<style>
+/* Pamata izkārtojums — šīs rindas nemaini */
+body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
+button, input { font: inherit; padding: 10px; margin: 4px; cursor: pointer; }
+img, audio { max-width: 100%; }
+[hidden] { display: none !important; }
+
+/* Skaņas bloku izskats — pielāgots spēles zilajai paletei */
+.skana {
+  background-color: #37658d;
+  border: 2px solid #2d7bc9;
+  border-radius: 12px;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.skana h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.skana p {
+  margin: 0 0 12px 0;
+}
+
+.skana audio {
+  display: block;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+<h1>GearX — spēles skaņas</h1>
+<p>Noklausies abus spēles skaņas efektus ar atskaņošanas pogu ▶. Skaņas sāk skanēt tikai pēc klika.</p>
+
+<div class="skana">
+  <h2>1. skaņa — punkta iegūšana</h2>
+  <p>Skan īsi un asi, kad varonis uzbrauc zobratam un savāc punktu. Skaņa apstiprina, ka punkts ir ieskaitīts.</p>
+  <audio controls src="skanas/klikskis.wav"></audio>
+</div>
+
+<div class="skana">
+  <h2>2. skaņa — līmeņa uzvara</h2>
+  <p>Skan, kad visi zobrati līmenī ir savākti un parādās uzvaras ekrāns. Skaņa noslēdz līmeni pirms pārejas uz nākamo.</p>
+  <audio controls src="uzvara.m4a"></audio>
+</div>
+</body>
+</html>
